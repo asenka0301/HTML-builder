@@ -23,7 +23,7 @@ function showFilesInFolerInfo(folderPath) {
             console.log(fileInfo);
           });
         } else {
-          func(path.join(folderPath, file.name));
+          showFilesInFolerInfo(path.join(folderPath, file.name));
         }
       }
     })

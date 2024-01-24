@@ -17,3 +17,11 @@ rl.on('line', (consoleData) => {
     output.write(consoleData + '\n');
   }
 });
+rl.on('SIGINT', () => {
+  console.log('bye bye');
+  output.end();
+  rl.close();
+});
+process.on('SIGINT', function () {
+  process.exit();
+});
